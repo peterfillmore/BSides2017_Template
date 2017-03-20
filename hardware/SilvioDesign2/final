@@ -1,0 +1,5 @@
+Reference, Value, Footprint, Datasheet
+"U1","NODEMCU_PART","bsidesbadge:NodeMCU_ThroughHole",""
+"BT1","Battery","Connect:PINHEAD1-2",""
+"BT2","Battery","bsidesbadge:2470_AAA_Battery_Holder",""
+"U2","RFID_READER","",""

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/media/sf_src/bsidesbadge/SilvioDesign2/final.sch</source>
+    <date>Mon 16 Jan 2017 19:11:38 AEDT</date>
+    <tool>Eeschema 4.0.4+e1-6308~48~ubuntu16.04.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>final.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>NODEMCU_PART</value>
+      <footprint>bsidesbadge:NodeMCU_ThroughHole</footprint>
+      <libsource lib="bsidesparts" part="NODEMCU_PART"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584F34E7</tstamp>
+    </comp>
+    <comp ref="BT1">
+      <value>Battery</value>
+      <footprint>Connect:PINHEAD1-2</footprint>
+      <libsource lib="device" part="Battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5868C7DA</tstamp>
+    </comp>
+    <comp ref="BT2">
+      <value>Battery</value>
+      <footprint>bsidesbadge:2470_AAA_Battery_Holder</footprint>
+      <libsource lib="device" part="Battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58788D51</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>RFID_READER</value>
+      <libsource lib="bsidesparts" part="RFID_READER"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>587C7DB8</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="Battery">
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="bsidesparts" part="NODEMCU_PART">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NODEMCU_PART</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TOUT/ADC0" type="input"/>
+        <pin num="2" name="G" type="passive"/>
+        <pin num="3" name="VU" type="power_out"/>
+        <pin num="4" name="SDD3/GPIO10" type="passive"/>
+        <pin num="5" name="SDD2/GPIO9" type="input"/>
+        <pin num="6" name="SDD1/MOSI" type="passive"/>
+        <pin num="7" name="SCMD/CS" type="passive"/>
+        <pin num="8" name="SDD0/MISO" type="passive"/>
+        <pin num="9" name="SDCLK/SCLK" type="passive"/>
+        <pin num="10" name="G" type="passive"/>
+        <pin num="11" name="3V" type="passive"/>
+        <pin num="12" name="EN" type="passive"/>
+        <pin num="13" name="RST" type="passive"/>
+        <pin num="14" name="G" type="passive"/>
+        <pin num="15" name="VIN" type="power_in"/>
+        <pin num="16" name="3V" type="passive"/>
+        <pin num="17" name="G" type="passive"/>
+        <pin num="18" name="GPIO1/TXD0" type="input"/>
+        <pin num="19" name="GPIO3/RXD0" type="input"/>
+        <pin num="20" name="GPIO15/TXD2/HCS" type="input"/>
+        <pin num="21" name="GPIO13/RXD2/HMOSI" type="input"/>
+        <pin num="22" name="GPIO12/HMISO" type="input"/>
+        <pin num="23" name="GPIO14/HSCLK" type="input"/>
+        <pin num="24" name="G" type="passive"/>
+        <pin num="25" name="3V" type="power_out"/>
+        <pin num="26" name="GPIO2/TXD1" type="input"/>
+        <pin num="27" name="GPIO0/FLASH" type="input"/>
+        <pin num="28" name="GPIO4" type="input"/>
+        <pin num="29" name="GPIO5" type="input"/>
+        <pin num="30" name="D0/GPIO16/USER/WAKE" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="bsidesparts" part="RFID_READER">
+      <description>Arduino RFID reader header.</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RFID_READER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SDA" type="input"/>
+        <pin num="2" name="SCK" type="input"/>
+        <pin num="3" name="MOSI" type="input"/>
+        <pin num="4" name="MISO" type="input"/>
+        <pin num="5" name="IRQ" type="input"/>
+        <pin num="6" name="GND" type="input"/>
+        <pin num="7" name="RST" type="input"/>
+        <pin num="8" name="3.3v" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="bsidesparts">
+      <uri>/media/sf_src/bsidesbadge/kicadlibrary/bsidesparts.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="2" name="VUSB">
+      <node ref="BT1" pin="1"/>
+      <node ref="BT2" pin="1"/>
+      <node ref="U1" pin="25"/>
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="12" name="Net-(U2-Pad5)">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="13" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="15" name="HMOSI">
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="16" name="HMISO">
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="17" name="HSCLK">
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="20" name="GND">
+      <node ref="U1" pin="17"/>
+      <node ref="U1" pin="14"/>
+      <node ref="U1" pin="10"/>
+      <node ref="U1" pin="2"/>
+      <node ref="BT2" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="BT1" pin="2"/>
+    </net>
+    <net code="21" name="Net-(U1-Pad28)">
+      <node ref="U1" pin="28"/>
+    </net>
+    <net code="22" name="Net-(U1-Pad24)">
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="23" name="Net-(U1-Pad16)">
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="24" name="Net-(U1-Pad26)">
+      <node ref="U1" pin="26"/>
+    </net>
+    <net code="25" name="Net-(U1-Pad27)">
+      <node ref="U1" pin="27"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad18)">
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="27" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="28" name="Net-(U1-Pad29)">
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad9)">
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad1)">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="32" name="Net-(U1-Pad4)">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="34" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="35" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="37" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="38" name="Net-(U1-Pad30)">
+      <node ref="U1" pin="30"/>
+    </net>
+    <net code="39" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="40" name="Net-(U1-Pad21)">
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="41" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="42" name="Net-(U1-Pad22)">
+      <node ref="U1" pin="22"/>
+    </net>
+    <net code="43" name="Net-(U1-Pad23)">
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="44" name="RFID_RST_PIN">
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="45" name="RFID_SS_PIN">
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="48" name="RST">
+      <node ref="U1" pin="13"/>
+    </net>
+  </nets>
+</export>

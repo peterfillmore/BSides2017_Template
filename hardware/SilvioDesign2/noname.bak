@@ -1,0 +1,352 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:bsidesparts
+LIBS:noname-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NODEMCU_PART U1
+U 1 1 584F34E7
+P 4300 2550
+F 0 "U1" H 4350 900 60  0000 C CNN
+F 1 "NODEMCU_PART" H 4500 2650 60  0000 C CNN
+F 2 "bsidesbadge:NodeMCU_ThroughHole" H 4100 1750 60  0001 C CNN
+F 3 "" H 4100 1750 60  0001 C CNN
+	1    4300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L RFID_READER U3
+U 1 1 584F34E8
+P 8450 4300
+F 0 "U3" H 8500 3550 60  0000 C CNN
+F 1 "RFID_READER" H 8750 4350 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 8450 4400 60  0001 C CNN
+F 3 "" H 8450 4400 60  0001 C CNN
+	1    8450 4300
+	-1   0    0    -1  
+$EndComp
+Text GLabel 4000 2650 0    60   Input ~ 0
+VUSB
+Wire Wire Line
+	4100 2650 4000 2650
+$Comp
+L +3.3V #PWR01
+U 1 1 5868BBED
+P 3850 2900
+F 0 "#PWR01" H 3850 2750 50  0001 C CNN
+F 1 "+3.3V" H 3850 3040 50  0000 C CNN
+F 2 "" H 3850 2900 50  0000 C CNN
+F 3 "" H 3850 2900 50  0000 C CNN
+	1    3850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3000 3850 3000
+Wire Wire Line
+	3850 3000 3850 2900
+$Comp
+L +BATT #PWR02
+U 1 1 5868BC2B
+P 3850 3200
+F 0 "#PWR02" H 3850 3050 50  0001 C CNN
+F 1 "+BATT" H 3850 3340 50  0000 C CNN
+F 2 "" H 3850 3200 50  0000 C CNN
+F 3 "" H 3850 3200 50  0000 C CNN
+	1    3850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3200 4100 3200
+Text GLabel 3950 3650 0    60   Input ~ 0
+EN
+Text GLabel 3950 3750 0    60   Input ~ 0
+RST
+Wire Wire Line
+	4100 3650 3950 3650
+Wire Wire Line
+	4100 3750 3950 3750
+$Comp
+L GND #PWR03
+U 1 1 5868BC72
+P 4000 4850
+F 0 "#PWR03" H 4000 4600 50  0001 C CNN
+F 1 "GND" H 4000 4700 50  0000 C CNN
+F 2 "" H 4000 4850 50  0000 C CNN
+F 3 "" H 4000 4850 50  0000 C CNN
+	1    4000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4350 4100 4750
+Wire Wire Line
+	4100 4350 4000 4350
+Wire Wire Line
+	4000 4350 4000 4850
+Text GLabel 5800 4250 2    60   Input ~ 0
+HCS
+Text GLabel 7800 2600 0    60   Input ~ 0
+HCS
+Text GLabel 5800 3350 2    60   Input ~ 0
+LCD_RESET
+Text GLabel 7800 2200 0    60   Input ~ 0
+LCD_RESET
+Text GLabel 5800 3050 2    60   Input ~ 0
+LCD_DC_SELECT
+Text GLabel 7800 2300 0    60   Input ~ 0
+LCD_DC_SELECT
+Text GLabel 5800 3650 2    60   Input ~ 0
+TXD0
+Text GLabel 7800 2000 0    60   Input ~ 0
+LCD_BACKLIGHT
+Text GLabel 5800 3550 2    60   Input ~ 0
+RFID_RST_PIN
+Text GLabel 7800 4900 0    60   Input ~ 0
+RFID_RST_PIN
+Text GLabel 5800 2850 2    60   Input ~ 0
+RFID_SS_PIN
+Text GLabel 7800 4400 0    60   Input ~ 0
+RFID_SS_PIN
+Text GLabel 5800 3950 2    60   Input ~ 0
+HSCLK
+Text GLabel 5800 4050 2    60   Input ~ 0
+HMISO
+Text GLabel 5800 4150 2    60   Input ~ 0
+HMOSI
+Text GLabel 7800 4500 0    60   Input ~ 0
+HSCLK
+Text GLabel 7800 2500 0    60   Input ~ 0
+HSCLK
+NoConn ~ 7800 4800
+Text GLabel 7800 4600 0    60   Input ~ 0
+HMOSI
+Text GLabel 7800 4700 0    60   Input ~ 0
+HMISO
+Text GLabel 7800 2400 0    60   Input ~ 0
+HMOSI
+$Comp
+L +3.3V #PWR04
+U 1 1 5868C702
+P 8650 4400
+F 0 "#PWR04" H 8650 4250 50  0001 C CNN
+F 1 "+3.3V" H 8650 4540 50  0000 C CNN
+F 2 "" H 8650 4400 50  0000 C CNN
+F 3 "" H 8650 4400 50  0000 C CNN
+	1    8650 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5868C71C
+P 8650 4900
+F 0 "#PWR05" H 8650 4650 50  0001 C CNN
+F 1 "GND" H 8650 4750 50  0000 C CNN
+F 2 "" H 8650 4900 50  0000 C CNN
+F 3 "" H 8650 4900 50  0000 C CNN
+	1    8650 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5868C76F
+P 8800 3700
+F 0 "#PWR06" H 8800 3450 50  0001 C CNN
+F 1 "GND" H 8800 3550 50  0000 C CNN
+F 2 "" H 8800 3700 50  0000 C CNN
+F 3 "" H 8800 3700 50  0000 C CNN
+	1    8800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR07
+U 1 1 5868C7B2
+P 8800 1900
+F 0 "#PWR07" H 8800 1750 50  0001 C CNN
+F 1 "+BATT" H 8800 2040 50  0000 C CNN
+F 2 "" H 8800 1900 50  0000 C CNN
+F 3 "" H 8800 1900 50  0000 C CNN
+	1    8800 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 5800 2650 2    60   Input ~ 0
+ADC0
+Text GLabel 5800 3750 2    60   Input ~ 0
+SD_CS
+Text GLabel 5800 3150 2    60   Input ~ 0
+LCD_BACKLIGHT
+Text GLabel 5800 4450 2    60   Input ~ 0
+MOSI
+Text GLabel 5800 4550 2    60   Input ~ 0
+CS
+Text GLabel 5800 4650 2    60   Input ~ 0
+MISO
+Text GLabel 5800 4750 2    60   Input ~ 0
+SCLK
+$Comp
+L Battery BT1
+U 1 1 5868C7DA
+P 2800 2700
+F 0 "BT1" H 2900 2750 50  0000 L CNN
+F 1 "Battery" H 2900 2650 50  0000 L CNN
+F 2 "Connect:PINHEAD1-2" V 2800 2740 50  0001 C CNN
+F 3 "" V 2800 2740 50  0000 C CNN
+	1    2800 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR08
+U 1 1 5868C82F
+P 2800 2500
+F 0 "#PWR08" H 2800 2350 50  0001 C CNN
+F 1 "+BATT" H 2800 2640 50  0000 C CNN
+F 2 "" H 2800 2500 50  0000 C CNN
+F 3 "" H 2800 2500 50  0000 C CNN
+	1    2800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 5868C84B
+P 2800 2900
+F 0 "#PWR09" H 2800 2650 50  0001 C CNN
+F 1 "GND" H 2800 2750 50  0000 C CNN
+F 2 "" H 2800 2900 50  0000 C CNN
+F 3 "" H 2800 2900 50  0000 C CNN
+	1    2800 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4450 4000 4450
+Connection ~ 4000 4450
+Connection ~ 4100 4450
+Wire Wire Line
+	4100 4550 4000 4550
+Connection ~ 4000 4550
+Connection ~ 4100 4550
+Wire Wire Line
+	4100 4650 4000 4650
+Connection ~ 4000 4650
+Connection ~ 4100 4650
+Connection ~ 4000 4850
+Wire Wire Line
+	2800 2550 2800 2500
+Wire Wire Line
+	2800 2850 2800 2900
+Wire Wire Line
+	4100 2800 4000 2800
+Wire Wire Line
+	4000 2800 4000 3000
+Connection ~ 4000 3000
+Wire Wire Line
+	4100 2900 4000 2900
+Connection ~ 4000 2900
+Wire Wire Line
+	8800 2000 8800 1900
+NoConn ~ 7800 3250
+NoConn ~ 7800 3350
+NoConn ~ 7800 3450
+Text GLabel 7800 3000 0    60   Input ~ 0
+HMOSI
+Text GLabel 7800 2900 0    60   Input ~ 0
+HMISO
+Text GLabel 7800 2800 0    60   Input ~ 0
+HSCLK
+Text GLabel 7800 3100 0    60   Input ~ 0
+SD_CS
+NoConn ~ 5800 2950
+NoConn ~ 5800 3250
+Text GLabel 9050 1950 1    60   Input ~ 0
+VUSB
+Wire Wire Line
+	9050 2000 9050 1950
+Wire Wire Line
+	8700 2000 9050 2000
+$Comp
+L LCD_Display_Module_KMR18 U2
+U 1 1 5878362D
+P 8400 1800
+F 0 "U2" H 8450 1900 60  0000 C CNN
+F 1 "LCD_Display_Module_KMR18" H 8700 -200 60  0000 C CNN
+F 2 "" H 8400 1900 60  0001 C CNN
+F 3 "" H 8400 1900 60  0001 C CNN
+	1    8400 1800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3600 8800 3600
+Wire Wire Line
+	8800 3600 8800 3700
+$Comp
+L GND #PWR010
+U 1 1 58783885
+P 7750 3650
+F 0 "#PWR010" H 7750 3400 50  0001 C CNN
+F 1 "GND" H 7750 3500 50  0000 C CNN
+F 2 "" H 7750 3650 50  0000 C CNN
+F 3 "" H 7750 3650 50  0000 C CNN
+	1    7750 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3600 7750 3600
+Wire Wire Line
+	7750 3600 7750 3650
+Connection ~ 8800 2000
+$Comp
+L Battery BT?
+U 1 1 58788D51
+P 2300 2700
+F 0 "BT?" H 2400 2750 50  0000 L CNN
+F 1 "Battery" H 2400 2650 50  0000 L CNN
+F 2 "bsidesbadge:2470_AAA_Battery_Holder" V 2300 2740 50  0001 C CNN
+F 3 "" V 2300 2740 50  0000 C CNN
+	1    2300 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2550 2300 2550
+Wire Wire Line
+	2800 2850 2300 2850
+Text Notes 2150 3150 1    60   ~ 0
+Throughhole Battery connector
+$EndSCHEMATC
